@@ -55,7 +55,7 @@ class UserSeeder extends Seeder
                 'name' => 'PKH',
                 'email' => 'kasubag_pkh@bpkh15gorontalo.com',
                 'role' => 'kepala divisi',
-                'password' => Password::hash('123adm!N'),
+                'password' => Hash::make('123adm!N'),
                 'id_divisi' => 3,
                 'status' => 'offline',
             

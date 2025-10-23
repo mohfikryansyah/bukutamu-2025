@@ -17,6 +17,7 @@ use App\Http\Controllers\PelayananController;
 use App\Http\Controllers\PengunjungController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\downloadTujuanController;
+use App\Http\Controllers\SurveyController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -45,6 +46,9 @@ Route::middleware(['auth', 'AdminPimpinan'])->group(function () {
     Route::resource('dashboard', DashboardController::class);
     Route::resource('dataPengunjung', PelayananController::class);
     Route::resource('dataPelayanan', TujuanController::class);
+    Route::resource('survei', SurveyController::class)->parameters([
+        'survei' => 'survey'
+    ]);
     Route::delete('deletedimg/{id}', [UploadController::class, 'deleteImage'])->name('deleteimg');
     Route::post('/dataPelayanan/{id}/upload', [UploadController::class, 'uploadGambar'])->name('upload');
     Route::get('/downloadDataPelayanan', [downloadTujuanController::class, 'downloadDataPelayanan'])->name('downloadDataPelayanan');

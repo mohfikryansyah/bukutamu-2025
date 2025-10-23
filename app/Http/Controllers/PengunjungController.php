@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Pesan;
 use App\Models\Divisi;
+use App\Models\Survey;
 use App\Models\Tujuan;
 use App\Models\Ulasan;
 use App\Models\Pengunjung;
@@ -32,8 +33,9 @@ class PengunjungController extends Controller
         $users = User::with('divisi')->get();
         $pelayanan = Pengunjung::all();
         $divisi = Divisi::all();
+        $survei = Survey::latest()->first();
 
-        return view('home.index', compact('pelayanan', 'divisi', 'users'));
+        return view('home.index', compact('pelayanan', 'divisi', 'users', 'survei'));
     }
 
     /**

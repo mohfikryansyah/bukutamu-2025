@@ -115,6 +115,13 @@
     @include('home.section4')
     {{-- END SECTION 4 --}}
 
+    {{-- SECTION 5 --}}
+    @if ($survei)
+        @include('home.section5')
+    @endif
+
+    {{-- END SECTION 5 --}}
+
     {{-- FOOTER --}}
     @include('home.footer')
     {{-- END FOOTER --}}
@@ -294,7 +301,7 @@
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 50) {
                     navbar.classList.add(
-                    'bg-emerald-900'); // Ganti dengan warna latar belakang yang diinginkan
+                        'bg-emerald-900'); // Ganti dengan warna latar belakang yang diinginkan
                     navbar.classList.add('bg-opacity-80', );
 
                     navbar.classList.remove('bg-emerald-700');

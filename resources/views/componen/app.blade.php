@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="{{ asset('build/assets/app-ee1baeca.css') }}" data-navigate-track="reload">
     <script type="module" src="{{ asset('build/assets/app-b1941ff8.js') }}" data-navigate-track="reload"></script>
     {{-- @vite(['resources/css/app.css','resources/js/app.js']) --}}
-    <link rel="stylesheet" href="{{ asset('build/assets/app-ee1baeca.css') }}" data-navigate-track="reload" />
-    <script type="module" src="{{ asset('build/assets/app-c8ff57e5.js') }}" data-navigate-track="reload"></script>
+    <link rel="stylesheet" href="{{ asset('build/assets/app-effb8eb2.css') }}" data-navigate-track="reload" />
     @livewireStyles
     <title>@yield('titel')</title>
 </head>
